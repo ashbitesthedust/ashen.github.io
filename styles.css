@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.modules {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.module {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.module h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+/* 模块1：电影选择区 */
+.movie-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.movie-search input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.movie-search button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.movie-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.movie-item:hover {
+    border-color: #3498db;
+    background: #f8f9fa;
+}
+.movie-item.active {
+    border-color: #3498db;
+    background: #e8f4fc;
+}
+.movie-detail {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+/* 模块2：演员阵容区 */
+.cast-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.cast-item {
+    padding: 8px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.cast-item:hover {
+    background: #e0e0e0;
+}
+.cast-detail {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+/* 模块3：影评与评分区 */
+.rating-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+.reviews {
+    margin-bottom: 20px;
+}
+.review-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.user-rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.stars {
+    color: #f39c12;
+    font-size: 20px;
+    cursor: pointer;
+}
+.user-review-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.submit-review {
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .modules {
+        grid-template-columns: 1fr 1fr;
+    }
+    .module:last-child {
+        grid-column: 1 / -1;
+    }
+}
